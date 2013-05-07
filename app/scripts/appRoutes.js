@@ -21,6 +21,16 @@ define([], function()
                 dependencies: [
                     'controllers/ContactViewController'
                 ]
+            },
+            '/dynaform': {
+                templateUrl: '/views/dynaForm.html',
+                dependencies: [
+                    'directives/wfDatePicker',
+                    'directives/wfDynamicField',
+                    'directives/wfDynamicForm',
+                    'services/getData',
+                    'services/getTemplate'
+                ]
             }
         }
     };
