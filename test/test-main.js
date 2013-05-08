@@ -1,31 +1,32 @@
-require.config({
-    baseUrl:'base/app/scripts',
-    map: {
-        '*':{
-            'vendor/angular':'../vendor/angular.min',
-            'vendor/angular-mocks':'../../test/vendor/angular-mocks'
-        }
+var tests = [];
+for (var file in window.__karma__.files) {
+    if (/Spec\.js$/.test(file)) {
+        tests.push(file);
+    }
+}
+
+requirejs.config({
+    // Karma serves files from '/base'
+    baseUrl: '/base/app/scripts',
+
+    paths: {
+        'angular': '../vendor/angular.min',
+        'angular-mocks': '../../test/vendor/angular-mocks'
     },
+
     shim: {
-        '../vendor/angular.min' : {
+        'angular': {
             exports: 'angular'
         },
-        '../../test/vendor/angular-mocks' : {
-            deps: ['vendor/angular'],
+        'angular-mocks' : {
+            deps: ['angular'],
             exports: 'angular.mock'
         }
-    }
-});
+    },
 
-require(
-    [
-        'vendor/angular',
-        'vendor/angular-mocks',
-        'appModule',
-        'controllers/HomeViewController',
-        '../../test/test-tests',
-        '../../test/spec/controllers/HomeViewController'
-    ],
-    function () {
-        window.__karma__.start();
-    });
+    // ask Require.js to load these files (all our tests)
+    deps: tests,
+
+    // start test run, once Require.js is done
+    callback: window.__karma__.start
+});

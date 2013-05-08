@@ -8,14 +8,12 @@ files = [
     REQUIRE,
     REQUIRE_ADAPTER,
 
-    'app/vendor/angular.min.js',
-
     // !! put all libs in requirejs 'paths' config here (included: false)
-    //{pattern: 'app/libs/**/*.js', included: false},
+    {pattern: 'app/vendor/**/*.js', included: false},
 
     // !! all src and test modules (included: false)
     {pattern: 'app/scripts/**/*.js', included: false},
-    {pattern: 'test/**/*.js', included: false},
+    {pattern: 'test/spec/**/*Spec.js', included: false},
 
     // !! test main require module last
     'test/test-main.js'
