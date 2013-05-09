@@ -1,10 +1,10 @@
 'use strict';
 
-define(['vendor/angular-mocks'], function (angular) {
+define(['angular', 'angularMocks', 'appModule', 'appRoutes'], function (angular, mocks, appModule, appRoutes) {
     describe('Controller: HomeViewController', function () {
 
         // load the controller's module
-        beforeEach(angular.module('app'));
+        beforeEach(module('app'));
 
         var HomeViewController, scope;
 

@@ -1,32 +1,24 @@
-var tests = [];
-for (var file in window.__karma__.files) {
-    if (/Spec\.js$/.test(file)) {
-        tests.push(file);
-    }
-}
-
 requirejs.config({
     // Karma serves files from '/base'
     baseUrl: '/base/app/scripts',
-
     paths: {
-        'angular': '../vendor/angular.min',
-        'angular-mocks': '../../test/vendor/angular-mocks'
+        'angular': '/base/app/vendor/angular.min',
+        'angularMocks': '/base/test/vendor/angular/angular-mocks'
     },
-
     shim: {
-        'angular': {
-            exports: 'angular'
-        },
-        'angular-mocks' : {
-            deps: ['angular'],
-            exports: 'angular.mock'
-        }
+        'angular': {'exports': 'angular'},
+        'angularMocks' : {deps: ['angular'], 'exports': 'angular.mock'}
     },
+    priority: ['angular']
+});
 
-    // ask Require.js to load these files (all our tests)
-    deps: tests,
+require( [
+    'angular',
+    'appModule',
+    'appRoutes',
+    'angularMocks',
+    '/base/test/unit.js' //list all your unit files here
 
-    // start test run, once Require.js is done
-    callback: window.__karma__.start
+], function(angular, appModule, appRoutes) {
+        window.__karma__.start();
 });

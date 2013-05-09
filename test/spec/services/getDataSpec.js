@@ -1,11 +1,11 @@
 'use strict';
 
-define(['angularMocks'], function (angular) {
+define(['angular', 'angularMocks', 'appModule', 'appRoutes'], function (angular, mocks, appModule, appRoutes) {
 
     describe('Service: getData', function () {
 
         // load the service's module
-        beforeEach(module('appModule'));
+        beforeEach(module('app'));
 
         // instantiate service
         var getData;

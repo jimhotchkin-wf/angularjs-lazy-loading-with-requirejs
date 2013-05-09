@@ -8,12 +8,14 @@ files = [
     REQUIRE,
     REQUIRE_ADAPTER,
 
-    // !! put all libs in requirejs 'paths' config here (included: false)
-    {pattern: 'app/vendor/**/*.js', included: false},
-
-    // !! all src and test modules (included: false)
+    {pattern: 'app/scripts/*.js', included: false},
     {pattern: 'app/scripts/**/*.js', included: false},
-    {pattern: 'test/spec/**/*Spec.js', included: false},
+    {pattern: 'test/unit.js', included: false},
+    {pattern: 'test/spec/*.js', included: false},
+    {pattern: 'test/spec/**/*.js', included: false},
+    {pattern: 'test/vendor/**/*.js', included: false},
+    {pattern: 'app/vendor/*.js', included: false},
+    {pattern: 'app/vendor/**/*.js', included: false},
 
     // !! test main require module last
     'test/test-main.js'
