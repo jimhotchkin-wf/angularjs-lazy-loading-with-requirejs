@@ -19,7 +19,8 @@ define([], function()
             '/contact': {
                 templateUrl: '/views/contact.html',
                 dependencies: [
-                    'controllers/ContactViewController'
+                    'controllers/ContactViewController',
+                    'directives/app-color'
                 ]
             },
             '/dynaform': {

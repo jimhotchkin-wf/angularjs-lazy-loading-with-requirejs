@@ -14,9 +14,9 @@ requirejs.config({
 
 require( [
     'angular',
+    'angularMocks',
     'appModule',
     'appRoutes',
-    'angularMocks',
     '/base/test/unit.js' //list all your unit files here
 
 ], function(angular, appModule, appRoutes) {

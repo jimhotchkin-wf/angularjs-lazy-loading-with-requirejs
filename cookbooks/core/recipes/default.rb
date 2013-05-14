@@ -1,5 +1,6 @@
 # BUILD PACKAGES
   include_recipe "nodejs"
+  chef_gem "compass"
 ####
 
 # npm packages
@@ -9,7 +10,6 @@ bash "npm" do
     npm install -g grunt-cli
     npm install -g karma
     cd /vagrant
-    npm install grunt --save-dev
     npm install
   EOH
 end
