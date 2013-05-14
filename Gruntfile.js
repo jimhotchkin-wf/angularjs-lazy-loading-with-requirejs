@@ -26,9 +26,10 @@ module.exports = function(grunt) {
             html: ['app/index.html']
         }
     });
+    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-concat');
-     grunt.loadNpmTasks('grunt-contrib-compass');
+    grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-usemin');
     grunt.registerTask('build', ['useminPrepare', 'concat', 'uglify', 'usemin']);
     grunt.registerTask('default', ['compass']);

@@ -36,7 +36,7 @@ This repo has been fitted with a Vagrant scaffolding, which will install nodejs 
 ### Running the dev server
 * From within the virtual machine's shell, switch to the project root: `cd /vagrant`
 * Run `node server.js` from within the root project directory to start the app
-* The dev server's port has been forwarded to [http://localhost:3030](http://localhost:3030)
+* The dev server's port has been forwarded to [http://localhost:3000](http://localhost:3000)
 
 ### Running tests
 * From within the virtual machine's shell, switch to the project root: `cd /vagrant`
