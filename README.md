@@ -33,6 +33,10 @@ This repo has been fitted with a Vagrant scaffolding, which will install nodejs 
 * After the installation scripts complete, enter the virtual machine's shell: `vagrant ssh`
 * From within the virtual machine's shell, switch to the project root: `cd /vagrant`
 
+### Grunt commands
+* `grunt` : default command, compiles the sass files to css
+* `grunt build` : compiles sass to css; copies files to 'dist' directory; concats and minifies vendor js libs; updates references in index.html
+
 ### Running the dev server
 * From within the virtual machine's shell, switch to the project root: `cd /vagrant`
 * Run `node server.js` from within the root project directory to start the app

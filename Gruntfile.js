@@ -36,20 +36,6 @@ module.exports = function(grunt) {
             ]
           }
         }
-        // copy: {
-        //   main: {
-        //     files: [
-        //       {expand: true, cwd: 'dist/', src: ['app/*.*'], dest: 'index.html', filter: 'isFile'}, //copies only files
-        //       {expand: true, cwd: 'dist/', src: ['app/scripts/**'], dest: 'scripts/'}, // includes files in path and its subdirs
-        //       {expand: true, cwd: 'dist/', src: ['app/styles/**'], dest: 'styles/'}, // includes files in path and its subdirs
-        //       {expand: true, cwd: 'dist/', src: ['app/vendor/**'], dest: 'vendor/'}, // includes files in path and its subdirs
-        //       {expand: true, cwd: 'dist/', src: ['app/views/**'], dest: 'views/'} // includes files in path and its subdirs
-        //       // {expand: true, cwd: 'path/', src: ['**'], dest: 'dest/'}, // makes all src relative to cwd
-        //       // {expand: true, flatten: true, src: ['path/**'], dest: 'dest/', filter: 'isFile'} // flattens results to a single level
-        //       // {src: ['css/**', 'img/**', 'js/**', 'release/**', 'lib/**', 'locale/**', '!**/*.less'], dest: 'output/toolkit/'}
-        //     ]
-        //   }
-        // }
     });
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
