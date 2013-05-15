@@ -18,6 +18,7 @@ This repo has been fitted with a Vagrant scaffolding, which will install nodejs 
 
 **Vagrant:**
 
+* Review the [WAPT Bigsky installation procedure](https://wiki.webfilings.com/display/DEV/Getting+Started+with+WAPT+Bigsky) for details regarding disk partitioning, etc.
 * Download [Vagrant.dmg](http://downloads.vagrantup.com/), open it and install it.
 
 **Virtual Machine Image:**
