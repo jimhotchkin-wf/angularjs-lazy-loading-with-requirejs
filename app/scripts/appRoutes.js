@@ -19,7 +19,18 @@ define([], function()
             '/contact': {
                 templateUrl: '/views/contact.html',
                 dependencies: [
-                    'controllers/ContactViewController'
+                    'controllers/ContactViewController',
+                    'directives/app-color'
+                ]
+            },
+            '/dynaform': {
+                templateUrl: '/views/dynaForm.html',
+                dependencies: [
+                    'directives/wfDatePicker',
+                    'directives/wfDynamicField',
+                    'directives/wfDynamicForm',
+                    'services/getData',
+                    'services/getTemplate'
                 ]
             }
         }
